@@ -1,4 +1,4 @@
-name: Python package
+name: Linter Flake8
 
 on:
   push:
