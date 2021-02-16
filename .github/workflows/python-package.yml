@@ -23,4 +23,4 @@ jobs:
         poetry add --dev flake8
         
      - name: Run my linter
-        run: flake8 brain_games
+        run: poetry --version
