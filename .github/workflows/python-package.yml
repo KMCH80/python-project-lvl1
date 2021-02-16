@@ -12,8 +12,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: abatilo/actions-poetry@v2.0.0
-
+    - name: Poetry install
+      run: |
+        poetry install
+        
     - name: Run my linter
       run: |
         poetry run flake8 brain_games
