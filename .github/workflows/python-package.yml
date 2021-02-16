@@ -20,5 +20,8 @@ jobs:
     - name: Install dependencies
       run: |
         poetry add --dev flake8
+        shell: bash
     - name: Run my linter
-      run: poetry --version
+      run: |
+        poetry --version
+        shell: bash
