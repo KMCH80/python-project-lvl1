@@ -1,11 +1,11 @@
 import random
-from brain_games.scripts.brain_games import levels, interval
+from brain_games.scripts.brain_games import rounds, interval
 from brain_games import cli
 
 
 def play_even():
     print('Answer \"yes\" if the number is even, otherwise answer \"no\".')
-    for _ in range(levels):
+    for _ in range(rounds):
         num = random.randint(1, interval)
         print('Question:', str(num))
         ans = input('Your answer: ')

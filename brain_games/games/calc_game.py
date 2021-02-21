@@ -1,11 +1,11 @@
 import random
-from brain_games.scripts.brain_games import levels, interval
+from brain_games.scripts.brain_games import rounds, interval
 from brain_games import cli
 
 
 def play_calc():
     print('What is the result of the expression?')
-    for _ in range(levels):
+    for _ in range(rounds):
         num1 = random.randint(1, interval)
         num2 = random.randint(1, interval)
         seq = [f'{num1} + {num2}', f'{num1} - {num2}', f'{num1} * {num2}']

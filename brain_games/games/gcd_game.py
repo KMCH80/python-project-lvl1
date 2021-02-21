@@ -1,11 +1,11 @@
 import random
-from brain_games.scripts.brain_games import levels, interval
+from brain_games.scripts.brain_games import rounds, interval
 from brain_games import cli
 
 
 def play_gcd():
     print('Find the greatest common divisor of given numbers.')
-    for _ in range(levels):
+    for _ in range(rounds):
         k = random.randint(2, interval)
         m = random.randint(2, interval)
         num1 = random.randint(2, interval)

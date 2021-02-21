@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from brain_games import cli
 
-levels = 3
+rounds = 3
 interval = 10
 
 
