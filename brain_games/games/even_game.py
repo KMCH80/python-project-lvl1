@@ -17,6 +17,6 @@ def play_even():
                 rl = 'no'
             else:
                 rl = 'yes'
-            cli.wrong_res(ans,rl)
+            cli.wrong_res(ans, rl)
             return False
     return True

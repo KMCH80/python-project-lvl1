@@ -17,6 +17,6 @@ def play_calc():
         if rs == int(ans):
             print('Correct!')
         else:
-            cli.wrong_res(ans,rs)
+            cli.wrong_res(ans, rs)
             return False
     return True
