@@ -1,5 +1,6 @@
 import random
 from brain_games.scripts.brain_games import levels, interval
+from brain_games import cli
 
 
 def play_even():
@@ -16,6 +17,6 @@ def play_even():
                 rl = 'no'
             else:
                 rl = 'yes'
-            print(f'\'{ans}\' is wrong answer ;(. Correct answer was \'{rl}\'.')
+            cli.wrong_res(ans,rl)
             return False
     return True

@@ -12,5 +12,9 @@ def congrat_user(name):
     print(f'Congratulations, {name}!')
 
 
+def wrong_res(ans, rs):
+    print(f'\'{ans}\' is wrong answer ;(. Correct answer was \'{rs}\'.')
+
+
 def wrong_bye(name):
     print(f'Let\'s try again, {name}!')

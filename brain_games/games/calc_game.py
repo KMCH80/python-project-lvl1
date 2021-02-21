@@ -1,5 +1,6 @@
 import random
 from brain_games.scripts.brain_games import levels, interval
+from brain_games import cli
 
 
 def play_calc():
@@ -16,6 +17,6 @@ def play_calc():
         if rs == int(ans):
             print('Correct!')
         else:
-            print(f'\'{ans}\' is wrong answer ;(. Correct answer was \'{rs}\'.')
+            cli.wrong_res(ans,rs)
             return False
     return True
