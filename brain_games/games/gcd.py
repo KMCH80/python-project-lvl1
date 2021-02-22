@@ -1,15 +1,12 @@
-import random
 from brain_games import cli
 
 
 def play():
     print('Find the greatest common divisor of given numbers.')
     for _ in range(cli.GAME_ROUNDS):
-        k = random.randint(2, cli.VALUE_INTERVAL)
-        m = random.randint(2, cli.VALUE_INTERVAL)
-        number1 = random.randint(2, cli.VALUE_INTERVAL)
-        number2 = number1 * k
-        number1 = number1 * m
+        k = cli.get_rand_val(2, cli.VALUE_INTERVAL)
+        number2 = k * cli.get_rand_val(2, cli.VALUE_INTERVAL)
+        number1 = k * cli.get_rand_val(2, cli.VALUE_INTERVAL)
         result = 1
         for i in range(number1, 1, -1):
             if number1 % i or number2 % i:

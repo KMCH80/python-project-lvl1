@@ -1,3 +1,4 @@
+import random
 import prompt
 
 GAME_ROUNDS = 3
@@ -21,6 +22,9 @@ def play(game_name):
         congrat_user(name)
     else:
         wrong_bye(name)
+
+def get_rand_val(start_interval, end_interval):
+    return random.randint(start_interval, end_interval)
 
 
 def ask_answer(question_param):
