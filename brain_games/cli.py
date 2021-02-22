@@ -23,6 +23,7 @@ def play(game_name):
     else:
         wrong_bye(name)
 
+
 def get_rand_val(start_interval, end_interval):
     return random.randint(start_interval, end_interval)
 
