@@ -4,6 +4,7 @@ MAX_LEN = 10
 MIN_LEN = 5
 MAX_STEP = 10
 
+
 def play():
     print('What number is missing in the progression?')
     for _ in range(cli.GAME_ROUNDS):
