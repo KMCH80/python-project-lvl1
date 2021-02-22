@@ -19,7 +19,7 @@ def play():
         take_away_elem = random.randint(1, seq_len)
         result = sequence[take_away_elem - 1]
         sequence[take_away_elem - 1] = '..'
-        seq_string = ', '.join(sequence)
+        seq_string = ' '.join(sequence)
         answer = cli.ask_answer(seq_string)
         if cli.check_result(answer, result):
             continue
