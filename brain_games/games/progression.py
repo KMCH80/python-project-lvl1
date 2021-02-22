@@ -13,7 +13,7 @@ def play():
         step = random.randint(1, MAX_STEP)
         sequence = [str(seq_first_elem)]
         elem = seq_first_elem
-        for _ in range(seq_len):
+        for __ in range(seq_len):
             elem += step
             sequence.append(str(elem))
         take_away_elem = random.randint(1, seq_len)
