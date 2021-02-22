@@ -1,13 +1,9 @@
-from brain_games.games import progression_game
+from brain_games.games import progression
 from brain_games import cli
 
 
 def main():
-    name = cli.welcome_user()
-    if progression_game.play_progression():
-        cli.congrat_user(name)
-    else:
-        cli.wrong_bye(name)
+    cli.play(progression.play)
 
 
 if __name__ == '__main__':

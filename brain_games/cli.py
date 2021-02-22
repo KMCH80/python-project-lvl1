@@ -1,7 +1,9 @@
 import prompt
 
+GAME_ROUNDS = 3
+VALUE_INTERVAL = 10
 
-# привестствие игрока и получение его имени
+
 def welcome_user():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
@@ -9,16 +11,36 @@ def welcome_user():
     return name
 
 
-# поздравление игрока (по имени) с выигранной игрой
 def congrat_user(name):
     print(f'Congratulations, {name}!')
 
 
-# объявление о неправильном ответе с указанием ответов
-def wrong_res(ans, rs):
-    print(f'\'{ans}\' is wrong answer ;(. Correct answer was \'{rs}\'.')
+def play(game_name):
+    name = welcome_user()
+    if game_name():
+        congrat_user(name)
+    else:
+        wrong_bye(name)
 
 
-# Прощание с игроком при неправильном ответе
+def ask_answer(question_param):
+    print(f'Question: {question_param}')
+    answer = input('Your answer: ')
+    return answer
+
+
+def check_result(answer, right_answer):
+    if right_answer == answer:
+        print('Correct!')
+        return True
+    else:
+        wrong_result(answer, right_answer)
+        return False
+
+
+def wrong_result(answer, result):
+    print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'{result}\'.')
+
+
 def wrong_bye(name):
     print(f'Let\'s try again, {name}!')

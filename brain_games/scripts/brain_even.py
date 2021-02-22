@@ -1,13 +1,9 @@
-from brain_games.games import even_game
+from brain_games.games import even
 from brain_games import cli
 
 
 def main():
-    name = cli.welcome_user()
-    if even_game.play_even():
-        cli.congrat_user(name)
-    else:
-        cli.wrong_bye(name)
+    cli.play(even.play)
 
 
 if __name__ == '__main__':
