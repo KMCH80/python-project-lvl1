@@ -5,7 +5,7 @@ def play():
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     for _ in range(cli.GAME_ROUNDS):
         number = cli.get_rand_val(2, cli.VALUE_INTERVAL)
-        if is_prime(number): 
+        if is_prime(number):
             result = 'yes'
         else:
             result = 'no'

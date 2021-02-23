@@ -19,8 +19,9 @@ def play():
 
 
 def get_div(number1, number2):
-    for i in range(min(number1,number2), 0, -1):
+    for i in range(min(number1, number2), 0, -1):
         if number1 % i or number2 % i:
             continue
         else:
             return i
+            
