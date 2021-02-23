@@ -24,4 +24,3 @@ def get_div(number1, number2):
             continue
         else:
             return i
-            
