@@ -2,7 +2,7 @@ import random
 import prompt
 
 GAME_ROUNDS = 3
-VALUE_INTERVAL = 10
+VALUE_INTERVAL = 5
 
 
 def welcome_user():
