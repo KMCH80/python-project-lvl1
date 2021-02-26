@@ -1,13 +1,11 @@
 name: Linter Flake8
 
-on:
-  push:
-    branches: [ main ]
+on: [push]
 
 jobs:
   build:
 
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -21,7 +19,7 @@ jobs:
       with:
         poetry-version: 1.1.2
     - name: Poetry install
-      run: poetry install
+      run: install
         
     - name: Run my linter
       run: make lint
