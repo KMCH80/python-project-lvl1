@@ -19,7 +19,7 @@ jobs:
       with:
         poetry-version: 1.1.2
     - name: Poetry install
-      run: install
+      run: make install
         
     - name: Run my linter
       run: make lint
