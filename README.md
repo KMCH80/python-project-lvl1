@@ -5,7 +5,7 @@
 
 ---
 
-# Welcome to Brain Games!
+# Welcome to Brain Games!      
 
 ## Quickstart
 ```bash
@@ -22,10 +22,11 @@ pip install brain-games
 ```
 
 ## Rules
-'''1. There are 5 games for your brain.
+```bash
+1. There are 5 games for your brain.
 2. Each game has 3 rounds.
 
-'''
+```
 
 ## Demo
 <a href="https://asciinema.org/a/qb4aL3w1dRxj9ExB607Mt8jpZ" target="_blank"><img src="https://asciinema.org/a/qb4aL3w1dRxj9ExB607Mt8jpZ.svg" /></a>
