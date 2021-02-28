@@ -27,7 +27,7 @@ pip install brain-games
 2. Choose which one do you want to play (even, calc, prime, gcd or progression) and run command.
 3. After running you should read the question and write in console right answer.
 4. Each game has 3 rounds. If your answer is correct you will see "Correct!" message and than next question.
-5. If your answer is not correct you will see the message about wrong answer and game over (((
+5. If your answer is not correct you will see the message about wrong answer and game over
 6. We wish you good luck! ;)
 ```
 
