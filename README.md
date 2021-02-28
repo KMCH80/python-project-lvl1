@@ -18,14 +18,16 @@ pip install brain-games
 2. brain-calc
 3. brain-prime
 4. brain-gcd
-5. brain-progression 
+5. brain-progression
 ```
 
 ## Rules
 ```bash
-1. There are 5 games for your brain.
-2. Each game has 3 rounds.
-
+1. There are 5 games special for your brain. Choose which one do you want to play (even, calc, prime, gcd or progression) and run command.
+2. After running you should read the question and write in console right answer.
+3. Each game has 3 rounds. If your answer is correct you will see "Correct!" message and than next question.
+4. If your answer is not correct you will see the message about wrong answer and game over (((
+5. We wish you good luck! ;)
 ```
 
 ## Demo
