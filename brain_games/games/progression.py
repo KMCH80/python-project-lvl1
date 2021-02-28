@@ -1,33 +1,48 @@
 import random
-from brain_games import cli
 
-MAX_LEN = 10
 MIN_LEN = 5
+MAX_LEN = 10
 MAX_STEP = 10
 
 
-def play():
+def tell_rules():
     print('What number is missing in the progression?')
-    for _ in range(cli.GAME_ROUNDS):
-        seq = seq_init()
-        result = random.choice(seq)
-        seq[seq.index(result)] = '..'
-        seq_string = ' '.join(seq)
-        answer = cli.ask_answer(seq_string)
-        if cli.check_result(answer, result):
-            continue
-        else:
-            return False
-    return True
 
 
-def seq_init():
-    seq_len = cli.get_rand_val(MIN_LEN, MAX_LEN)
-    seq_first_elem = cli.get_rand_val(1, cli.VALUE_INTERVAL)
-    step = cli.get_rand_val(1, MAX_STEP)
+def get_task_with_right_answer(value_interval):
+    seq = seq_init(value_interval)
+    task_with_right_answer = take_away_elem(seq)
+    return [task_with_right_answer[1], task_with_right_answer[0]]
+
+
+def take_away_elem(seq):
+    away_elem = random.choice(seq)
+    seq[seq.index(away_elem)] = '..'
+    seq_str = ' '.join(seq)
+    return [away_elem, seq_str]
+
+
+def seq_init(value_interval):
+    seq_len = random.randint(MIN_LEN, MAX_LEN)
+    seq_first_elem = random.randint(1, value_interval)
+    step = random.randint(1, MAX_STEP)
     sequence = [str(seq_first_elem)]
     elem = seq_first_elem
     for __ in range(seq_len):
         elem += step
         sequence.append(str(elem))
     return sequence
+
+
+def get_right_answer(task):
+    if is_even(task):
+        return 'yes'
+    else:
+        return 'no'
+
+
+def is_even(task):
+    if task % 2:
+        return False
+    else:
+        return True

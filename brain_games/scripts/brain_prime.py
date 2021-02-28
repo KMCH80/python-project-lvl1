@@ -1,9 +1,8 @@
-from brain_games.games import prime
-from brain_games import cli
+from brain_games.games import player
 
 
 def main():
-    cli.play(prime.play)
+    player.start_game('prime')
 
 
 if __name__ == '__main__':

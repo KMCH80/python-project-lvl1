@@ -1,23 +1,25 @@
-from brain_games import cli
+import random
 
 
-def play():
+def tell_rules():
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    for _ in range(cli.GAME_ROUNDS):
-        number = cli.get_rand_val(2, cli.VALUE_INTERVAL)
-        if is_prime(number):
-            result = 'yes'
-        else:
-            result = 'no'
-        answer = cli.ask_answer(str(number))
-        if cli.check_result(answer, result):
-            continue
-        else:
-            return False
-    return True
+
+
+def get_task_with_right_answer(value_interval):
+    task = random.randint(1, value_interval)
+    return [task, get_right_answer(task)]
+
+
+def get_right_answer(number):
+    if is_prime(number):
+        return 'yes'
+    else:
+        return 'no'
 
 
 def is_prime(number):
+    if number <= 1:
+        return False
     for i in range(number - 1, 1, -1):
         if number % i:
             continue

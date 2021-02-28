@@ -1,9 +1,8 @@
-from brain_games.games import even
-from brain_games import cli
+from brain_games.games import player
 
 
 def main():
-    cli.play(even.play)
+    player.start_game('even')
 
 
 if __name__ == '__main__':

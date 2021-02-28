@@ -1,21 +1,24 @@
-from brain_games import cli
+import random
 
 
-def play():
+def tell_rules():
     print('Answer \"yes\" if the number is even, otherwise answer \"no\".')
-    for _ in range(cli.GAME_ROUNDS):
-        number = cli.get_rand_val(1, cli.VALUE_INTERVAL)
-        answer = cli.ask_answer(str(number))
-        result = is_even(number)
-        if cli.check_result(answer, result):
-            continue
-        else:
-            return False
-    return True
 
 
-def is_even(number):
-    if number % 2:
-        return 'no'
-    else:
+def get_task_with_right_answer(value_interval):
+    task = random.randint(1, value_interval)
+    return [task, get_right_answer(task)]
+
+
+def get_right_answer(task):
+    if is_even(task):
         return 'yes'
+    else:
+        return 'no'
+
+
+def is_even(task):
+    if task % 2:
+        return False
+    else:
+        return True

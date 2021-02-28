@@ -1,26 +1,29 @@
-from brain_games import cli
+import random
 
 
-def play():
+def tell_rules():
     print('Find the greatest common divisor of given numbers.')
-    for _ in range(cli.GAME_ROUNDS):
-        result = 1
-        while result == 1:
-            number1 = cli.get_rand_val(2, cli.VALUE_INTERVAL)
-            number2 = cli.get_rand_val(2, cli.VALUE_INTERVAL)
-            result = get_div(number1, number2)
-        q_set = [str(number1), str(number2)]
-        answer = cli.ask_answer(' '.join(q_set))
-        if cli.check_result(int(answer), result):
-            continue
-        else:
-            return False
-    return True
 
 
-def get_div(number1, number2):
-    for i in range(min(number1, number2), 0, -1):
-        if number1 % i or number2 % i:
-            continue
+def get_task_with_right_answer(value_interval):
+    two_numbers = generate_two_numbers(value_interval)
+    result = get_right_answer(two_numbers[0], two_numbers[1])
+    q_set = f'{two_numbers[0]} {two_numbers[1]}'
+    return [q_set, str(result)]
+
+
+def generate_two_numbers(value_interval):
+    number1 = number2 = 1
+    while get_right_answer(number1, number2) == 1:
+        number1 = random.randint(2, value_interval)
+        number2 = random.randint(2, value_interval)
+    return [number1, number2]
+
+
+def get_right_answer(number1, number2):
+    while number1 != 0 and number2 != 0:
+        if number1 > number2:
+            number1 %= number2
         else:
-            return i
+            number2 %= number1
+    return number1 + number2

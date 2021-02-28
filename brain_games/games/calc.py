@@ -1,18 +1,23 @@
 import random
-from brain_games import cli
 
 
-def play():
+def tell_rules():
     print('What is the result of the expression?')
-    for _ in range(cli.GAME_ROUNDS):
-        num1 = cli.get_rand_val(1, cli.VALUE_INTERVAL)
-        num2 = cli.get_rand_val(1, cli.VALUE_INTERVAL)
-        set_exp = [f'{num1} + {num2}', f'{num1} - {num2}', f'{num1} * {num2}']
-        exp = random.choice(set_exp)
-        answer = cli.ask_answer(exp)
-        result = eval(exp)
-        if cli.check_result(int(answer), result):
-            continue
-        else:
-            return False
-    return True
+
+
+def get_task_with_right_answer(value_interval):
+    num1 = random.randint(1, value_interval)
+    num2 = random.randint(1, value_interval)
+    signs_set = ['+', '-', '*']
+    str_sign = random.choice(signs_set)
+    task = f'{num1} {str_sign} {num2}'
+    return [task, get_right_answer(num1, num2, str_sign)]
+
+
+def get_right_answer(num1, num2, str_sign):
+    if str_sign == '+':
+        return str(num1 + num2)
+    elif str_sign == '-':
+        return str(num1 - num2)
+    elif str_sign == '*':
+        return str(num1 * num2)

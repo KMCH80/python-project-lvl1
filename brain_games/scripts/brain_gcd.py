@@ -1,9 +1,8 @@
-from brain_games.games import gcd
-from brain_games import cli
+from brain_games.games import player
 
 
 def main():
-    cli.play(gcd.play)
+    player.start_game('gcd')
 
 
 if __name__ == '__main__':
