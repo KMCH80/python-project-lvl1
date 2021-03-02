@@ -1,13 +1,12 @@
 import random
 
+VALUE_INTERVAL = 1000
+RULES = 'Answer \"yes\" if the number is even, otherwise answer \"no\".'
 
-def tell_rules():
-    print('Answer \"yes\" if the number is even, otherwise answer \"no\".')
 
-
-def get_task_with_right_answer(value_interval):
-    task = random.randint(1, value_interval)
-    return [task, get_right_answer(task)]
+def get_task_with_right_answer():
+    task = random.randint(1, VALUE_INTERVAL)
+    return task, get_right_answer(task)
 
 
 def get_right_answer(task):
@@ -18,7 +17,4 @@ def get_right_answer(task):
 
 
 def is_even(task):
-    if task % 2:
-        return False
-    else:
-        return True
+    return task % 2 == 0
