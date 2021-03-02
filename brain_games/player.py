@@ -10,11 +10,12 @@ def start_game(game_module):
     print(game_module.RULES)
     for _ in range(GAME_ROUNDS):
         task, right = game_module.get_task_with_right_answer()
-        answer = say_ask_answer(task)
-        if answer == right:
+        ans = say_ask_answer(task)
+        if ans == right:
             print('Correct!')
         else:
-            print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'{right}\'.')
+            s = f'\'{ans}\' is wrong answer ;(. Correct answer was \'{right}\'.'
+            print(s)
             print(f'Let\'s try again, {user_name}!')
             return
     print(f'Congratulations, {user_name}!')
