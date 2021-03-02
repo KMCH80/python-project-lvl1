@@ -32,4 +32,4 @@ pip install brain-games
 ```
 
 ## Demo
-<a href="https://asciinema.org/a/qb4aL3w1dRxj9ExB607Mt8jpZ" target="_blank"><img src="https://asciinema.org/a/qb4aL3w1dRxj9ExB607Mt8jpZ.svg" /></a>
+[![asciicast](https://asciinema.org/a/8Ie7xqdrMOqts6AHxgx2KIzf0.svg)](https://asciinema.org/a/8Ie7xqdrMOqts6AHxgx2KIzf0)
