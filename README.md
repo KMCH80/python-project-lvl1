@@ -9,16 +9,16 @@
 
 ## Quickstart
 ```bash
-pip install brain-games
+pip install git+https://github.com/KMCH80/python-project-lvl1.git
 ```
 
 ## Running commands
 ```bash
-1. brain-even
-2. brain-calc
-3. brain-prime
-4. brain-gcd
-5. brain-progression
+1. $  brain-even
+2. $  brain-calc
+3. $  brain-prime
+4. $  brain-gcd
+5. $  brain-progression
 ```
 
 ## Rules
