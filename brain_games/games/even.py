@@ -1,11 +1,12 @@
 import random
 
-VALUE_INTERVAL = 1000
-RULES = 'Answer \"yes\" if the number is even, otherwise answer \"no\".'
+MIN_VALUE = 1
+MAX_VALUE = 1000
+RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def get_task_with_right_answer():
-    task = random.randint(1, VALUE_INTERVAL)
+    task = random.randint(MIN_VALUE, MAX_VALUE)
     return task, get_right_answer(task)
 
 
