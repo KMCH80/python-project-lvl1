@@ -1,7 +1,7 @@
 import random
 
 MIN_VALUE = 1
-MAX_VALUE = 1000
+MAX_VALUE = 100
 RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
@@ -20,7 +20,7 @@ def get_right_answer(number):
 def is_prime(number):
     if number <= 1:
         return False
-    for i in range(number - 1, 1, -1):
+    for i in range(2, number // 2):
         if number % i == 0:
             return False
     return True
